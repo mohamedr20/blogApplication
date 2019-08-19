@@ -8,6 +8,7 @@ const notesRouter = require('./controllers/notes')
 const logger = require('./utils/logger');
 const app = express()
 
+logger.info('connecting to', config.MONGODB_URI)
 mongo.connectToMongo()
 
 app.use(bodyParser.json())
